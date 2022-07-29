@@ -393,7 +393,7 @@ RUN if [ "${ALLOW_ADDING_EXTENSIONS}" != "true" ]; then \
 FROM builder AS trimmed
 
 RUN apt-get purge -y ${BUILD_PACKAGES}
-# Install custom packages
+# Install custom packages (for inspection)
 RUN apt-get install -y vim top
 RUN apt-get autoremove -y \
     && apt-get clean \
